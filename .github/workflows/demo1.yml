@@ -19,7 +19,6 @@ on:
       #Something like developer-1 will igonored for example
     paths-ignore:
       - ".github.workflows.*"
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
