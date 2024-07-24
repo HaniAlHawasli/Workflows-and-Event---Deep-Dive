@@ -9,6 +9,7 @@ describe('MainContent', () => {
     render(<MainContent />);
 // this is a test comment.
 // Yet another comment.
+// Added a third comment
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
