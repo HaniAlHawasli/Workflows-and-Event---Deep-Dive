@@ -3,7 +3,22 @@ on:
   pull_request:
     types:
       - opened
+    branches:
+      - main #Triggered when pushed to the main branch
+      - "dev-*" #Triggered when dev-something dev-firstthing-secondthing. The star stands for anything letter except for /
+      - "feat/**" #Triggered when feat/new/branch the two stars stand for 2 slashes included
+      #Something like developer-1 will igonored for example
+    paths-ignore:
+      - ".github.workflows.*"
   workflow_dispatch:
+  push:
+    branches:
+      - main #Triggered when pushed to the main branch
+      - "dev-*" #Triggered when dev-something dev-firstthing-secondthing. The star stands for anything letter except for /
+      - "feat/**" #Triggered when feat/new/branch the two stars stand for 2 slashes included
+      #Something like developer-1 will igonored for example
+    paths-ignore:
+      - ".github.workflows.*"
 jobs:
   deploy:
     runs-on: ubuntu-latest
